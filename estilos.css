@@ -6,6 +6,13 @@
     margin: 0;
 }
 
+.wrapper{
+    height: 100vh;
+    max-width: 920px;
+    margin: 0 auto;
+    max-height: 100vh;
+}
+
 
 /*
     AJUSTES GENERALES
@@ -17,6 +24,7 @@ h3{
     font-family: 'Karla', sans-serif;
     font-size: .9em;
     padding: .4em .5em;
+    
 }
 
 hgroup{
@@ -26,6 +34,7 @@ hgroup{
     justify-content: space-between;
     background-color: #5277c7;
     padding: 0 .5em;
+    margin: 0 0 1em 0;
 }
 
 hgroup p{
@@ -38,9 +47,6 @@ hgroup p{
 a{
     color: #3e9722;
 }
-
-
-
 
 /*
     AJUSTES ESPECÍFICOS
@@ -95,10 +101,11 @@ main{
     display: flex;
     flex-flow: row wrap;
     max-width: 960px;
-    margin: 1em auto;
+    margin: 3em auto;
     justify-content: center;
     position: relative;
     padding: 1em 0;
+    
 }
 
 .border{
@@ -117,17 +124,15 @@ main > section {
 }
 
 
-
-
-main > section:first-child{
-    max-width:220px;
+main > .col1{
+    width:220px;
 }
 
-main > section:first-child h3{
+main > .col1 h3{
     text-align: center;
 }
 
-main > section:first-of-type form {
+main > .col1 form {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
@@ -140,7 +145,7 @@ form .input{
     flex-flow: column nowrap;
 }
 
-main > section:first-of-type form > *{
+main > .col1 form > *{
     margin: .2em 0;
 }
 
@@ -233,16 +238,35 @@ footer{
     display: flex;
     max-width: 920px;
     padding: 2em 0;
-    margin: 2em auto 0 auto;
-    text-align: center;
+    justify-content: center;
+    margin: 5em auto 0 auto;
     border: .2em solid #71d12d;
     border-width: .2em .2em 0 .2em;
     border-radius: 1em 1em 0 0;
     font-family: 'Karla', sans-serif;
     font-size: .8em;
+    
+
 
 }
 
+
+@media (max-width:400px){
+    .wrapper > header > nav{
+        flex-flow: column nowrap;
+        width: 100%;
+        background-color: red;
+    }
+
+ 
+    .textoFP{
+        padding: 1em;
+    }
+
+    main > section.col3, .wrapper > main > section#col2{
+        width: 100%;
+    }
+}
 
 
 @media (max-width:779px){
@@ -252,12 +276,16 @@ footer{
         
     }
 
+    .wrapper > main >.col1 > article{
+        width: 100%;
+    }
+
  
     .textoFP{
         padding: 1em;
     }
 
-    main > section#banner, .wrapper > main > section#col2{
+    main > section.col3, .wrapper > main > section#col2{
         width: 100%;
     }
 }
