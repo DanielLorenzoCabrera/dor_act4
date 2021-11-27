@@ -7,10 +7,9 @@
 }
 
 .wrapper{
-    height: 100vh;
+    min-height: 100vh;
     max-width: 920px;
     margin: 0 auto;
-    max-height: 100vh;
 }
 
 
@@ -124,8 +123,8 @@ main > section {
 }
 
 
-main > .col1{
-    width:220px;
+.wrapper > main > .col1{
+    width: 100%;
 }
 
 main > .col1 h3{
@@ -158,9 +157,8 @@ main > section:first-child >article:nth-of-type(2) > section{
 }
 
 
-main > section:nth-of-type(2){
-    width: 480px;
-    padding-left: 20px;
+.wrapper > main > .col2{
+    width: 100%;
 }
 
 
@@ -217,7 +215,7 @@ main > section:nth-of-type(2) > article:nth-of-type(2) > div > section:last-of-t
 
 
 
-main > section:last-child{
+main > .col3{
     width: 180px;
     padding-left: 20px;
 }
@@ -250,42 +248,57 @@ footer{
 
 }
 
+footer p {
+    text-align: center;
+}
 
-@media (max-width:400px){
-    .wrapper > header > nav{
+/******* MEDIA *******/
+
+
+@media (min-width: 200px){
+    body > .wrapper > header > nav{
         flex-flow: column nowrap;
         width: 100%;
-        background-color: red;
     }
-
  
     .textoFP{
         padding: 1em;
     }
 
-    main > section.col3, .wrapper > main > section#col2{
-        width: 100%;
-    }
-}
-
-
-@media (max-width:779px){
-    .wrapper > main > section{
-        width: 100%;
-        padding: 0;
-        
-    }
 
     .wrapper > main >.col1 > article{
         width: 100%;
     }
 
- 
-    .textoFP{
-        padding: 1em;
-    }
-
-    main > section.col3, .wrapper > main > section#col2{
+    .wrapper > main > section{
         width: 100%;
+        padding: 0;
+        
     }
 }
+
+
+@media (min-width: 720px){
+    body > .wrapper > header > nav{
+        flex-flow: row wrap;
+    }
+
+    .wrapper > main >.col1{
+       width: 220px;
+
+    }
+
+    .wrapper > main >.col2{
+        width: 480px;
+        padding-left: 20px;
+    }
+
+    .wrapper > main >.col3{
+        width: 180px;
+        padding-left: 20px;
+    }
+
+}
+
+
+
